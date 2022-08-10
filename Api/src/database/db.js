@@ -1,9 +1,9 @@
 import db from 'mongoose';
+import config from './config';
 
-
- let dbcconect = async ()=>{
-await db.connect('mongodb://localhost/polarincloud');
+ let dbconect = async ()=>{
+await db.connect(config.mongodbURL);
 console.log(db.connection.name);
 }
 
-dbcconect();
+dbconect();
