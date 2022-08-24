@@ -1,6 +1,7 @@
 import { Schema, model } from "mongoose";
 
-let users = new Schema({
+
+let Users = new Schema({
     nombre:{
         type: String,
         required: true,
@@ -12,10 +13,17 @@ let users = new Schema({
         trim: true,
     },
     password:{
-        type: Number,
+        type: String,
         required: true,
         trim: true,
     },
+    usuario:{
+        type: String,
+        required: true,
+        trim: true
+    }
 })
 
-export default model('Users', users)
+
+
+export default model('Users', Users)
